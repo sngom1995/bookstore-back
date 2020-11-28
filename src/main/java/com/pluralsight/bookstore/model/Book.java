@@ -28,6 +28,17 @@ public class Book {
     @Column()
     private Language language;
 
+    public Book(String isbn, String a_title, float uniCost, int nbOfPages, Language language, java.util.Date date, String s, String description) {
+        this.title = a_title;
+        this.description = description;
+        this.isbn = isbn;
+        this.imageUrl = s;
+        this.nbOfPages = nbOfPages;
+        this.uniCost = uniCost;
+        this.language = language;
+        this.publicationDate = (Date) date;
+    }
+
     public Long getId() {
         return id;
     }
